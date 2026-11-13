@@ -1,0 +1,16 @@
+services:
+  postgis:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_USER: tourist_safety
+      POSTGRES_PASSWORD: tourist_safety_dev
+      POSTGRES_DB: tourist_safety
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./db/schema_postgis.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tourist_safety"]
+      interval: 5s
+      timeout: 5s
+      retries: 5

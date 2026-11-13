@@ -1,0 +1,15 @@
+{
+  "experiment_d": {
+    "workflows_completed": 20,
+    "avg_detection_to_ws_alert_ms": 137.37,
+    "p95_detection_to_ws_alert_ms": 582.57,
+    "avg_end_to_end_resolve_ms": 222.05
+  },
+  "backend_performance": {
+    "total_requests": 100,
+    "concurrency": 10,
+    "throughput_rps": 8.23,
+    "mean_api_latency_ms": 1132.53,
+    "p95_api_latency_ms": 1402.34
+  }
+}

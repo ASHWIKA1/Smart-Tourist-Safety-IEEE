@@ -1,0 +1,172 @@
+{
+  "dataset_info": {
+    "train_trajectories": 400,
+    "val_trajectories": 150,
+    "test_trajectories": 300,
+    "split_policy": "trajectory_level_independent_seeds"
+  },
+  "experiment_a_model_comparison": [
+    {
+      "precision": 0.3288,
+      "recall": 1.0,
+      "f1_score": 0.4948,
+      "fpr": 0.6447,
+      "auc": 0.795,
+      "false_alerts_per_hour": 19.34,
+      "tp": 72,
+      "fp": 147,
+      "fn": 0,
+      "tn": 81,
+      "model": "Rule-Based",
+      "detection_delay_s": 11.53
+    },
+    {
+      "precision": 0.973,
+      "recall": 1.0,
+      "f1_score": 0.9863,
+      "fpr": 0.0088,
+      "auc": 1.0,
+      "false_alerts_per_hour": 0.26,
+      "tp": 72,
+      "fp": 2,
+      "fn": 0,
+      "tn": 226,
+      "model": "Local Outlier Factor (LOF)",
+      "detection_delay_s": 5.07
+    },
+    {
+      "precision": 0.973,
+      "recall": 1.0,
+      "f1_score": 0.9863,
+      "fpr": 0.0088,
+      "auc": 0.9967,
+      "false_alerts_per_hour": 0.26,
+      "tp": 72,
+      "fp": 2,
+      "fn": 0,
+      "tn": 226,
+      "model": "Isolation Forest",
+      "detection_delay_s": 6.11
+    },
+    {
+      "precision": 0.9722,
+      "recall": 0.9722,
+      "f1_score": 0.9722,
+      "fpr": 0.0088,
+      "auc": 0.9967,
+      "false_alerts_per_hour": 0.26,
+      "tp": 70,
+      "fp": 2,
+      "fn": 2,
+      "tn": 226,
+      "model": "Geo-fencing + Isolation Forest",
+      "detection_delay_s": 6.25
+    }
+  ],
+  "experiment_b_gps_sensitivity": [
+    {
+      "condition": "2m GPS error",
+      "missed_detections_fn": 0,
+      "false_alerts_fp": 21,
+      "precision": 0.7,
+      "recall": 1.0,
+      "f1_score": 0.8235,
+      "false_alerts_per_hour": 4.17
+    },
+    {
+      "condition": "5m GPS error",
+      "missed_detections_fn": 11,
+      "false_alerts_fp": 4,
+      "precision": 0.9048,
+      "recall": 0.7755,
+      "f1_score": 0.8352,
+      "false_alerts_per_hour": 0.79
+    },
+    {
+      "condition": "10m GPS error",
+      "missed_detections_fn": 14,
+      "false_alerts_fp": 53,
+      "precision": 0.4045,
+      "recall": 0.72,
+      "f1_score": 0.518,
+      "false_alerts_per_hour": 10.6
+    },
+    {
+      "condition": "15m GPS error",
+      "missed_detections_fn": 0,
+      "false_alerts_fp": 143,
+      "precision": 0.2513,
+      "recall": 1.0,
+      "f1_score": 0.4017,
+      "false_alerts_per_hour": 28.22
+    },
+    {
+      "condition": "Missing GPS readings (30% dropout)",
+      "missed_detections_fn": 0,
+      "false_alerts_fp": 1,
+      "precision": 0.9821,
+      "recall": 1.0,
+      "f1_score": 0.991,
+      "false_alerts_per_hour": 0.21
+    },
+    {
+      "condition": "Sudden GPS jumps (15% spike)",
+      "missed_detections_fn": 0,
+      "false_alerts_fp": 150,
+      "precision": 0.2424,
+      "recall": 1.0,
+      "f1_score": 0.3902,
+      "false_alerts_per_hour": 29.61
+    }
+  ],
+  "experiment_c_identity_security": {
+    "n_trials": 100,
+    "avg_issuance_anchor_latency_ms": 0.4064,
+    "ledger_block_count": 202,
+    "ledger_chain_intact": true,
+    "cases": [
+      {
+        "test_case": "valid",
+        "total": 100,
+        "accepted": 100,
+        "rejected": 0,
+        "avg_latency_ms": 0.3484
+      },
+      {
+        "test_case": "modified",
+        "total": 100,
+        "accepted": 0,
+        "rejected": 100,
+        "avg_latency_ms": 0.4302
+      },
+      {
+        "test_case": "expired",
+        "total": 100,
+        "accepted": 0,
+        "rejected": 100,
+        "avg_latency_ms": 0.3964
+      },
+      {
+        "test_case": "revoked",
+        "total": 100,
+        "accepted": 0,
+        "rejected": 100,
+        "avg_latency_ms": 0.3415
+      },
+      {
+        "test_case": "invalid_issuer_signature",
+        "total": 100,
+        "accepted": 0,
+        "rejected": 100,
+        "avg_latency_ms": 0.3825
+      },
+      {
+        "test_case": "replayed",
+        "total": 100,
+        "accepted": 0,
+        "rejected": 100,
+        "avg_latency_ms": 0.4303
+      }
+    ]
+  }
+}

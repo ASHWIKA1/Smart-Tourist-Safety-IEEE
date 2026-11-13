@@ -1,0 +1,480 @@
+{
+  "seeds": [
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110
+  ],
+  "trajectories_per_seed": {
+    "train": 400,
+    "val": 150,
+    "test": 300,
+    "gps_noise_m": 3.5
+  },
+  "multi_seed_model_comparison": [
+    {
+      "model": "Rule-Based",
+      "n_seeds": 10,
+      "precision": {
+        "mean": 0.344,
+        "std": 0.0386,
+        "ci95": 0.024
+      },
+      "recall": {
+        "mean": 1.0,
+        "std": 0.0,
+        "ci95": 0.0
+      },
+      "f1_score": {
+        "mean": 0.5108,
+        "std": 0.0431,
+        "ci95": 0.0267
+      },
+      "fpr": {
+        "mean": 0.6517,
+        "std": 0.0305,
+        "ci95": 0.0189
+      },
+      "auc": {
+        "mean": 0.7979,
+        "std": 0.0184,
+        "ci95": 0.0114
+      },
+      "false_alerts_per_hour": {
+        "mean": 19.551,
+        "std": 0.9138,
+        "ci95": 0.5663
+      },
+      "detection_delay_s": {
+        "mean": 10.602,
+        "std": 0.8062,
+        "ci95": 0.4997
+      }
+    },
+    {
+      "model": "Local Outlier Factor (LOF)",
+      "n_seeds": 10,
+      "precision": {
+        "mean": 0.9912,
+        "std": 0.0101,
+        "ci95": 0.0063
+      },
+      "recall": {
+        "mean": 1.0,
+        "std": 0.0,
+        "ci95": 0.0
+      },
+      "f1_score": {
+        "mean": 0.9956,
+        "std": 0.0051,
+        "ci95": 0.0032
+      },
+      "fpr": {
+        "mean": 0.0032,
+        "std": 0.0037,
+        "ci95": 0.0023
+      },
+      "auc": {
+        "mean": 1.0,
+        "std": 0.0,
+        "ci95": 0.0
+      },
+      "false_alerts_per_hour": {
+        "mean": 0.094,
+        "std": 0.111,
+        "ci95": 0.0688
+      },
+      "detection_delay_s": {
+        "mean": 5.528,
+        "std": 0.5274,
+        "ci95": 0.3269
+      }
+    },
+    {
+      "model": "Isolation Forest",
+      "n_seeds": 10,
+      "precision": {
+        "mean": 0.9415,
+        "std": 0.0352,
+        "ci95": 0.0218
+      },
+      "recall": {
+        "mean": 0.9962,
+        "std": 0.0062,
+        "ci95": 0.0038
+      },
+      "f1_score": {
+        "mean": 0.9677,
+        "std": 0.0177,
+        "ci95": 0.011
+      },
+      "fpr": {
+        "mean": 0.0221,
+        "std": 0.0157,
+        "ci95": 0.0098
+      },
+      "auc": {
+        "mean": 0.9978,
+        "std": 0.0019,
+        "ci95": 0.0012
+      },
+      "false_alerts_per_hour": {
+        "mean": 0.662,
+        "std": 0.4739,
+        "ci95": 0.2937
+      },
+      "detection_delay_s": {
+        "mean": 5.087,
+        "std": 0.0972,
+        "ci95": 0.0602
+      }
+    },
+    {
+      "model": "Geo-fencing + Isolation Forest",
+      "n_seeds": 10,
+      "precision": {
+        "mean": 0.9406,
+        "std": 0.0371,
+        "ci95": 0.023
+      },
+      "recall": {
+        "mean": 0.9962,
+        "std": 0.0062,
+        "ci95": 0.0038
+      },
+      "f1_score": {
+        "mean": 0.9672,
+        "std": 0.0188,
+        "ci95": 0.0117
+      },
+      "fpr": {
+        "mean": 0.0226,
+        "std": 0.0167,
+        "ci95": 0.0103
+      },
+      "auc": {
+        "mean": 0.9978,
+        "std": 0.0019,
+        "ci95": 0.0012
+      },
+      "false_alerts_per_hour": {
+        "mean": 0.675,
+        "std": 0.5008,
+        "ci95": 0.3104
+      },
+      "detection_delay_s": {
+        "mean": 5.087,
+        "std": 0.0972,
+        "ci95": 0.0602
+      }
+    }
+  ],
+  "feature_ablation": [
+    {
+      "model": "Isolation Forest",
+      "feature_subset": "Speed only (3)",
+      "n_seeds": 10,
+      "precision": {
+        "mean": 0.923,
+        "std": 0.0563,
+        "ci95": 0.0349
+      },
+      "recall": {
+        "mean": 0.5797,
+        "std": 0.054,
+        "ci95": 0.0335
+      },
+      "f1_score": {
+        "mean": 0.7101,
+        "std": 0.0442,
+        "ci95": 0.0274
+      },
+      "auc": {
+        "mean": 0.8369,
+        "std": 0.0241,
+        "ci95": 0.0149
+      },
+      "false_alerts_per_hour": {
+        "mean": 0.526,
+        "std": 0.4622,
+        "ci95": 0.2865
+      }
+    },
+    {
+      "model": "LOF",
+      "feature_subset": "Speed only (3)",
+      "n_seeds": 10,
+      "precision": {
+        "mean": 0.8695,
+        "std": 0.0664,
+        "ci95": 0.0412
+      },
+      "recall": {
+        "mean": 0.6618,
+        "std": 0.0808,
+        "ci95": 0.0501
+      },
+      "f1_score": {
+        "mean": 0.7458,
+        "std": 0.0355,
+        "ci95": 0.022
+      },
+      "auc": {
+        "mean": 0.92,
+        "std": 0.0229,
+        "ci95": 0.0142
+      },
+      "false_alerts_per_hour": {
+        "mean": 1.135,
+        "std": 0.8489,
+        "ci95": 0.5262
+      }
+    },
+    {
+      "model": "Isolation Forest",
+      "feature_subset": "Stop duration only (1)",
+      "n_seeds": 10,
+      "precision": {
+        "mean": 0.318,
+        "std": 0.0518,
+        "ci95": 0.0321
+      },
+      "recall": {
+        "mean": 0.8682,
+        "std": 0.1448,
+        "ci95": 0.0898
+      },
+      "f1_score": {
+        "mean": 0.456,
+        "std": 0.0349,
+        "ci95": 0.0216
+      },
+      "auc": {
+        "mean": 0.6547,
+        "std": 0.0325,
+        "ci95": 0.0201
+      },
+      "false_alerts_per_hour": {
+        "mean": 19.63,
+        "std": 4.5919,
+        "ci95": 2.8461
+      }
+    },
+    {
+      "model": "LOF",
+      "feature_subset": "Stop duration only (1)",
+      "n_seeds": 10,
+      "precision": {
+        "mean": 0.2547,
+        "std": 0.0293,
+        "ci95": 0.0181
+      },
+      "recall": {
+        "mean": 1.0,
+        "std": 0.0,
+        "ci95": 0.0
+      },
+      "f1_score": {
+        "mean": 0.4052,
+        "std": 0.037,
+        "ci95": 0.0229
+      },
+      "auc": {
+        "mean": 0.5243,
+        "std": 0.0191,
+        "ci95": 0.0118
+      },
+      "false_alerts_per_hour": {
+        "mean": 30.0,
+        "std": 0.0,
+        "ci95": 0.0
+      }
+    },
+    {
+      "model": "Isolation Forest",
+      "feature_subset": "Route deviation only (2)",
+      "n_seeds": 10,
+      "precision": {
+        "mean": 0.9736,
+        "std": 0.0276,
+        "ci95": 0.0171
+      },
+      "recall": {
+        "mean": 1.0,
+        "std": 0.0,
+        "ci95": 0.0
+      },
+      "f1_score": {
+        "mean": 0.9865,
+        "std": 0.0143,
+        "ci95": 0.0089
+      },
+      "auc": {
+        "mean": 1.0,
+        "std": 0.0,
+        "ci95": 0.0
+      },
+      "false_alerts_per_hour": {
+        "mean": 0.281,
+        "std": 0.3146,
+        "ci95": 0.195
+      }
+    },
+    {
+      "model": "LOF",
+      "feature_subset": "Route deviation only (2)",
+      "n_seeds": 10,
+      "precision": {
+        "mean": 0.9988,
+        "std": 0.0038,
+        "ci95": 0.0023
+      },
+      "recall": {
+        "mean": 1.0,
+        "std": 0.0,
+        "ci95": 0.0
+      },
+      "f1_score": {
+        "mean": 0.9994,
+        "std": 0.0019,
+        "ci95": 0.0012
+      },
+      "auc": {
+        "mean": 1.0,
+        "std": 0.0,
+        "ci95": 0.0
+      },
+      "false_alerts_per_hour": {
+        "mean": 0.014,
+        "std": 0.0443,
+        "ci95": 0.0274
+      }
+    },
+    {
+      "model": "Isolation Forest",
+      "feature_subset": "Speed + Stop (4)",
+      "n_seeds": 10,
+      "precision": {
+        "mean": 0.9073,
+        "std": 0.0696,
+        "ci95": 0.0431
+      },
+      "recall": {
+        "mean": 0.5966,
+        "std": 0.0491,
+        "ci95": 0.0304
+      },
+      "f1_score": {
+        "mean": 0.7168,
+        "std": 0.0325,
+        "ci95": 0.0201
+      },
+      "auc": {
+        "mean": 0.8599,
+        "std": 0.03,
+        "ci95": 0.0186
+      },
+      "false_alerts_per_hour": {
+        "mean": 0.705,
+        "std": 0.6817,
+        "ci95": 0.4225
+      }
+    },
+    {
+      "model": "LOF",
+      "feature_subset": "Speed + Stop (4)",
+      "n_seeds": 10,
+      "precision": {
+        "mean": 0.856,
+        "std": 0.0832,
+        "ci95": 0.0516
+      },
+      "recall": {
+        "mean": 0.647,
+        "std": 0.0546,
+        "ci95": 0.0338
+      },
+      "f1_score": {
+        "mean": 0.7324,
+        "std": 0.0248,
+        "ci95": 0.0153
+      },
+      "auc": {
+        "mean": 0.8838,
+        "std": 0.025,
+        "ci95": 0.0155
+      },
+      "false_alerts_per_hour": {
+        "mean": 1.301,
+        "std": 0.9526,
+        "ci95": 0.5904
+      }
+    },
+    {
+      "model": "Isolation Forest",
+      "feature_subset": "All features (7)",
+      "n_seeds": 10,
+      "precision": {
+        "mean": 0.9415,
+        "std": 0.0352,
+        "ci95": 0.0218
+      },
+      "recall": {
+        "mean": 0.9962,
+        "std": 0.0062,
+        "ci95": 0.0038
+      },
+      "f1_score": {
+        "mean": 0.9677,
+        "std": 0.0177,
+        "ci95": 0.011
+      },
+      "auc": {
+        "mean": 0.9978,
+        "std": 0.0019,
+        "ci95": 0.0012
+      },
+      "false_alerts_per_hour": {
+        "mean": 0.662,
+        "std": 0.4739,
+        "ci95": 0.2937
+      }
+    },
+    {
+      "model": "LOF",
+      "feature_subset": "All features (7)",
+      "n_seeds": 10,
+      "precision": {
+        "mean": 0.9912,
+        "std": 0.0101,
+        "ci95": 0.0063
+      },
+      "recall": {
+        "mean": 1.0,
+        "std": 0.0,
+        "ci95": 0.0
+      },
+      "f1_score": {
+        "mean": 0.9956,
+        "std": 0.0051,
+        "ci95": 0.0032
+      },
+      "auc": {
+        "mean": 1.0,
+        "std": 0.0,
+        "ci95": 0.0
+      },
+      "false_alerts_per_hour": {
+        "mean": 0.094,
+        "std": 0.111,
+        "ci95": 0.0688
+      }
+    }
+  ]
+}

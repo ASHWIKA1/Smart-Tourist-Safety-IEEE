@@ -1,0 +1,13 @@
+{
+  "name": "tourist-identity-chaincode",
+  "version": "1.0.0",
+  "description": "Hyperledger Fabric smart contract for Tourist DID & Verifiable Credential anchoring",
+  "main": "index.js",
+  "scripts": {
+    "start": "fabric-chaincode-node start"
+  },
+  "dependencies": {
+    "fabric-contract-api": "^2.5.4",
+    "fabric-shim": "^2.5.4"
+  }
+}
