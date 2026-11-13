@@ -8,6 +8,7 @@ Phase 1 Core Engine and Experimental Suite (aligned with the Phase-I IEEE system
 - `src/tourist_safety/anomaly.py`: Movement window feature extraction (speed, stop duration, route deviation, missing-gap ratio) plus `RuleBasedDetector`, `LOFDetector`, `IsolationForestDetector` (`a(x) = -score_samples(x)`), and `HybridGeofenceIFDetector`.
 - `src/tourist_safety/identity.py`: W3C-inspired DID & Verifiable Credential issuance with Ed25519 digital signatures, canonical JSON + SHA-256 hashing, off-chain PII separation, hash-chained permissioned ledger simulation, revocation, expiry, and replay-nonce checks.
 - `src/tourist_safety/incident.py`: End-to-end alert prioritization (`SOS > restricted_zone > movement_anomaly`) and incident lifecycle tracking (`pending -> acknowledged -> in_progress -> resolved`).
+- `src/tourist_safety/preprocess.py`: GPS prefiltering - Hampel spike filter and causal gated constant-velocity Kalman filter (Experiment B-2).
 - `src/tourist_safety/simulator.py`: Reproducible trajectory-split synthetic tourist movement generator with configurable GPS error, dropouts, and sudden jumps.
 
 ## Running Tests & Experiments
@@ -18,4 +19,12 @@ Phase 1 Core Engine and Experimental Suite (aligned with the Phase-I IEEE system
 
 # Run Experiments A, B, and C
 $env:PYTHONPATH="src"; .\.venv\Scripts\python.exe experiments\run_experiments.py
+
+# 10-seed GPS prefilter experiment (Experiment B-2) -> experiments/results/prefilter_*.{json,md}
+$env:PYTHONPATH="src"; .\.venv\Scripts\python.exe experiments\run_prefilter_experiment.py
 ```
+
+Other experiment scripts: `experiments/run_ablation_and_ci.py` (10-seed comparison + feature ablation, Tables II-III) and
+`experiments/run_backend_experiments.py` (Experiment D, live FastAPI + WebSocket).
+
+The conference paper (IEEE two-column) is in `paper/Smart_Tourist_Safety_IEEE_Conference_Final.pdf` (and `.docx`).

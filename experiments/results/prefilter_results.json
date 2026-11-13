@@ -1,0 +1,442 @@
+{
+  "raw": {
+    "2 m GPS error": {
+      "precision": {
+        "mean": 0.7101,
+        "ci95": 0.0288
+      },
+      "recall": {
+        "mean": 1.0,
+        "ci95": 0.0
+      },
+      "f1_score": {
+        "mean": 0.8297,
+        "ci95": 0.0198
+      },
+      "false_alerts_per_hour": {
+        "mean": 4.103,
+        "ci95": 0.3373
+      }
+    },
+    "5 m GPS error": {
+      "precision": {
+        "mean": 0.8918,
+        "ci95": 0.0231
+      },
+      "recall": {
+        "mean": 0.8427,
+        "ci95": 0.0304
+      },
+      "f1_score": {
+        "mean": 0.8657,
+        "ci95": 0.0212
+      },
+      "false_alerts_per_hour": {
+        "mean": 1.046,
+        "ci95": 0.2575
+      }
+    },
+    "10 m GPS error": {
+      "precision": {
+        "mean": 0.4177,
+        "ci95": 0.0228
+      },
+      "recall": {
+        "mean": 0.7775,
+        "ci95": 0.0214
+      },
+      "f1_score": {
+        "mean": 0.5427,
+        "ci95": 0.0224
+      },
+      "false_alerts_per_hour": {
+        "mean": 10.955,
+        "ci95": 0.5374
+      }
+    },
+    "15 m GPS error": {
+      "precision": {
+        "mean": 0.2679,
+        "ci95": 0.0148
+      },
+      "recall": {
+        "mean": 0.9982,
+        "ci95": 0.0034
+      },
+      "f1_score": {
+        "mean": 0.4219,
+        "ci95": 0.0184
+      },
+      "false_alerts_per_hour": {
+        "mean": 27.558,
+        "ci95": 0.2844
+      }
+    },
+    "30% dropout": {
+      "precision": {
+        "mean": 0.9128,
+        "ci95": 0.0166
+      },
+      "recall": {
+        "mean": 1.0,
+        "ci95": 0.0
+      },
+      "f1_score": {
+        "mean": 0.9542,
+        "ci95": 0.009
+      },
+      "false_alerts_per_hour": {
+        "mean": 0.884,
+        "ci95": 0.1472
+      }
+    },
+    "15% jump spikes": {
+      "precision": {
+        "mean": 0.2642,
+        "ci95": 0.0177
+      },
+      "recall": {
+        "mean": 1.0,
+        "ci95": 0.0
+      },
+      "f1_score": {
+        "mean": 0.4172,
+        "ci95": 0.0225
+      },
+      "false_alerts_per_hour": {
+        "mean": 29.511,
+        "ci95": 0.1898
+      }
+    }
+  },
+  "hampel": {
+    "2 m GPS error": {
+      "precision": {
+        "mean": 0.6896,
+        "ci95": 0.0269
+      },
+      "recall": {
+        "mean": 1.0,
+        "ci95": 0.0
+      },
+      "f1_score": {
+        "mean": 0.8156,
+        "ci95": 0.0189
+      },
+      "false_alerts_per_hour": {
+        "mean": 4.528,
+        "ci95": 0.3272
+      }
+    },
+    "5 m GPS error": {
+      "precision": {
+        "mean": 0.903,
+        "ci95": 0.023
+      },
+      "recall": {
+        "mean": 0.829,
+        "ci95": 0.0297
+      },
+      "f1_score": {
+        "mean": 0.8636,
+        "ci95": 0.0209
+      },
+      "false_alerts_per_hour": {
+        "mean": 0.903,
+        "ci95": 0.2289
+      }
+    },
+    "10 m GPS error": {
+      "precision": {
+        "mean": 0.4669,
+        "ci95": 0.0247
+      },
+      "recall": {
+        "mean": 0.8605,
+        "ci95": 0.0255
+      },
+      "f1_score": {
+        "mean": 0.6048,
+        "ci95": 0.0253
+      },
+      "false_alerts_per_hour": {
+        "mean": 9.937,
+        "ci95": 0.6471
+      }
+    },
+    "15 m GPS error": {
+      "precision": {
+        "mean": 0.2774,
+        "ci95": 0.0161
+      },
+      "recall": {
+        "mean": 0.996,
+        "ci95": 0.0053
+      },
+      "f1_score": {
+        "mean": 0.4334,
+        "ci95": 0.0198
+      },
+      "false_alerts_per_hour": {
+        "mean": 26.211,
+        "ci95": 0.2772
+      }
+    },
+    "30% dropout": {
+      "precision": {
+        "mean": 0.829,
+        "ci95": 0.0262
+      },
+      "recall": {
+        "mean": 1.0,
+        "ci95": 0.0
+      },
+      "f1_score": {
+        "mean": 0.9059,
+        "ci95": 0.0162
+      },
+      "false_alerts_per_hour": {
+        "mean": 1.925,
+        "ci95": 0.2636
+      }
+    },
+    "15% jump spikes": {
+      "precision": {
+        "mean": 0.4508,
+        "ci95": 0.026
+      },
+      "recall": {
+        "mean": 1.0,
+        "ci95": 0.0
+      },
+      "f1_score": {
+        "mean": 0.6204,
+        "ci95": 0.0254
+      },
+      "false_alerts_per_hour": {
+        "mean": 12.913,
+        "ci95": 0.7084
+      }
+    }
+  },
+  "kalman": {
+    "2 m GPS error": {
+      "precision": {
+        "mean": 0.4069,
+        "ci95": 0.0144
+      },
+      "recall": {
+        "mean": 1.0,
+        "ci95": 0.0
+      },
+      "f1_score": {
+        "mean": 0.578,
+        "ci95": 0.0145
+      },
+      "false_alerts_per_hour": {
+        "mean": 14.718,
+        "ci95": 0.5967
+      }
+    },
+    "5 m GPS error": {
+      "precision": {
+        "mean": 0.948,
+        "ci95": 0.0224
+      },
+      "recall": {
+        "mean": 1.0,
+        "ci95": 0.0
+      },
+      "f1_score": {
+        "mean": 0.973,
+        "ci95": 0.012
+      },
+      "false_alerts_per_hour": {
+        "mean": 0.562,
+        "ci95": 0.2444
+      }
+    },
+    "10 m GPS error": {
+      "precision": {
+        "mean": 0.7087,
+        "ci95": 0.0394
+      },
+      "recall": {
+        "mean": 1.0,
+        "ci95": 0.0
+      },
+      "f1_score": {
+        "mean": 0.828,
+        "ci95": 0.0273
+      },
+      "false_alerts_per_hour": {
+        "mean": 4.158,
+        "ci95": 0.5742
+      }
+    },
+    "15 m GPS error": {
+      "precision": {
+        "mean": 0.3533,
+        "ci95": 0.016
+      },
+      "recall": {
+        "mean": 1.0,
+        "ci95": 0.0
+      },
+      "f1_score": {
+        "mean": 0.5216,
+        "ci95": 0.0177
+      },
+      "false_alerts_per_hour": {
+        "mean": 18.507,
+        "ci95": 0.7995
+      }
+    },
+    "30% dropout": {
+      "precision": {
+        "mean": 0.7335,
+        "ci95": 0.0159
+      },
+      "recall": {
+        "mean": 1.0,
+        "ci95": 0.0
+      },
+      "f1_score": {
+        "mean": 0.846,
+        "ci95": 0.0105
+      },
+      "false_alerts_per_hour": {
+        "mean": 3.415,
+        "ci95": 0.2489
+      }
+    },
+    "15% jump spikes": {
+      "precision": {
+        "mean": 0.3468,
+        "ci95": 0.0232
+      },
+      "recall": {
+        "mean": 1.0,
+        "ci95": 0.0
+      },
+      "f1_score": {
+        "mean": 0.514,
+        "ci95": 0.0262
+      },
+      "false_alerts_per_hour": {
+        "mean": 19.964,
+        "ci95": 0.6347
+      }
+    }
+  },
+  "hampel+kalman": {
+    "2 m GPS error": {
+      "precision": {
+        "mean": 0.486,
+        "ci95": 0.0146
+      },
+      "recall": {
+        "mean": 1.0,
+        "ci95": 0.0
+      },
+      "f1_score": {
+        "mean": 0.6538,
+        "ci95": 0.0132
+      },
+      "false_alerts_per_hour": {
+        "mean": 10.686,
+        "ci95": 0.5668
+      }
+    },
+    "5 m GPS error": {
+      "precision": {
+        "mean": 0.9673,
+        "ci95": 0.0132
+      },
+      "recall": {
+        "mean": 0.9818,
+        "ci95": 0.0111
+      },
+      "f1_score": {
+        "mean": 0.9744,
+        "ci95": 0.0101
+      },
+      "false_alerts_per_hour": {
+        "mean": 0.342,
+        "ci95": 0.1455
+      }
+    },
+    "10 m GPS error": {
+      "precision": {
+        "mean": 0.7977,
+        "ci95": 0.031
+      },
+      "recall": {
+        "mean": 0.9343,
+        "ci95": 0.0196
+      },
+      "f1_score": {
+        "mean": 0.8596,
+        "ci95": 0.0194
+      },
+      "false_alerts_per_hour": {
+        "mean": 2.407,
+        "ci95": 0.4243
+      }
+    },
+    "15 m GPS error": {
+      "precision": {
+        "mean": 0.4491,
+        "ci95": 0.0223
+      },
+      "recall": {
+        "mean": 0.9959,
+        "ci95": 0.0054
+      },
+      "f1_score": {
+        "mean": 0.6183,
+        "ci95": 0.0214
+      },
+      "false_alerts_per_hour": {
+        "mean": 12.386,
+        "ci95": 0.91
+      }
+    },
+    "30% dropout": {
+      "precision": {
+        "mean": 0.8132,
+        "ci95": 0.0314
+      },
+      "recall": {
+        "mean": 1.0,
+        "ci95": 0.0
+      },
+      "f1_score": {
+        "mean": 0.8962,
+        "ci95": 0.0197
+      },
+      "false_alerts_per_hour": {
+        "mean": 2.165,
+        "ci95": 0.3787
+      }
+    },
+    "15% jump spikes": {
+      "precision": {
+        "mean": 0.5276,
+        "ci95": 0.0263
+      },
+      "recall": {
+        "mean": 1.0,
+        "ci95": 0.0
+      },
+      "f1_score": {
+        "mean": 0.6898,
+        "ci95": 0.0234
+      },
+      "false_alerts_per_hour": {
+        "mean": 9.483,
+        "ci95": 0.5833
+      }
+    }
+  }
+}
